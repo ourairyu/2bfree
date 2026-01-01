@@ -1,0 +1,15 @@
+---
+import BrandLogo from './BrandLogo.astro';
+
+interface Props {
+  style?: string;
+}
+
+const { style } = Astro.props;
+---
+
+<header class="flex items-center m-0 px-5 bg-white shadow-md" style={style}>
+  <nav class="max-w-screen-xl my-0 mx-auto flex grow items-center justify-between">
+    <BrandLogo />
+  </nav>
+</header>

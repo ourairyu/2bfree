@@ -1,0 +1,20 @@
+---
+interface Props {
+  style?: string;
+}
+
+const { style } = Astro.props;
+const today = new Date();
+---
+
+<footer style={style}>
+  &copy; 2023-{today.getFullYear()} <a href="https://ourai.ws" target="_blank" rel="external">欧雷流</a> 保留所有权利
+</footer>
+<style>
+  footer {
+    padding: 2em 1em 6em 1em;
+    background: linear-gradient(var(--gray-gradient)) no-repeat;
+    color: rgb(var(--gray));
+    text-align: center;
+  }
+</style>

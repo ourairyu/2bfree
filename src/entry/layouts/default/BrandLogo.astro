@@ -1,0 +1,11 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+import { SITE_TITLE, I18N_DEFAULT_LOCALE } from '@/constants/config';
+
+const getLocaleUrl = getRelativeLocaleUrl.bind(null, Astro.currentLocale || I18N_DEFAULT_LOCALE);
+---
+
+<div class="flex items-center">
+  <a class="text-2xl/none text-gray-800 hover:text-gray-500" href={getLocaleUrl('/')}>{SITE_TITLE}</a>
+</div>
