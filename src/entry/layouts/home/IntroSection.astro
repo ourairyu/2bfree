@@ -1,6 +1,8 @@
 ---
 import lifeMilestones from './life-milestones.png';
+
 import Section from './Section.astro';
+import Card from './Card.astro';
 ---
 
 <Section class="text-center" title="「破局之路」是什么？">
@@ -11,17 +13,8 @@ import Section from './Section.astro';
   </figure>
   <p>将探索心路凝结成了这个付费专栏，它是：</p>
   <div class="grid gap-4 lg:gap-9 grid-cols-1 sm:grid-cols-3">
-    <div class="box-border border-1 overflow-hidden rounded-lg bg-white shadow-xl">
-      <h3 class="pt-4 text-xl font-semibold">个人成长历程与思考类周报</h3>
-      <p class="px-4 text-sm text-neutral-500">「周报」这种内容形式是欧雷的内容体系、「<a href="https://o.ourai.ws/about/" target="_blank" rel="external">开放生活实验</a>」的一部分，但与<a href="https://s.ourai.ws/topics/weekly/" target="_blank" rel="external">常规的周报</a>不同，本专栏聚焦于「如何从主流人生蜕变成自由人生」这件事。</p>
-    </div>
-    <div class="box-border border-1 overflow-hidden rounded-lg bg-white shadow-xl">
-      <h3 class="pt-4 text-xl font-semibold">绝对真实的草根真人秀</h3>
-      <p class="px-4 text-sm text-neutral-500">欧雷是个普通人，但是个坚决贯彻自我意志且要实现理想生活的普通人，在本专栏能真切地看到一个普通人华丽转身的过程。正因为是普通人，任谁都可以与欧雷交流心得，甚至共事或成为朋友，而非像那些明星、偶像般难以触及。</p>
-    </div>
-    <div class="box-border border-1 overflow-hidden rounded-lg bg-white shadow-xl">
-      <h3 class="pt-4 text-xl font-semibold">超级个体社区「欧雷宇宙」入场券</h3>
-      <p class="px-4 text-sm text-neutral-500">欧雷基于「把自己作为平台」的理念成立了个人社区「<a href="https://c.ourai.ws/about/" target="_blank" rel="external">欧雷宇宙</a>」，以此为载体将自己的人际网络等可共享的资源与能力显性化。购买本专栏即可接入「欧雷宇宙」这个价值网络，为自己过自由人生而赋能。</p>
-    </div>
+    <Card heading="个人成长历程与思考类周报">「周报」这种内容形式是欧雷的内容体系、「<a href="https://o.ourai.ws/about/" target="_blank" rel="external">开放生活实验</a>」的一部分，但与<a href="https://s.ourai.ws/topics/weekly/" target="_blank" rel="external">常规的周报</a>不同，本专栏聚焦于「如何从主流人生蜕变成自由人生」这件事。</Card>
+    <Card heading="绝对真实的草根真人秀">欧雷是个普通人，但是个坚决贯彻自我意志且要实现理想生活的普通人，在本专栏能真切地看到一个普通人华丽转身的过程。正因为是普通人，任谁都可以与欧雷交流心得，甚至共事或成为朋友，而非像那些明星、偶像般难以触及。</Card>
+    <Card heading="超级个体社区「欧雷宇宙」入场券">欧雷基于「把自己作为平台」的理念成立了个人社区「<a href="https://c.ourai.ws/about/" target="_blank" rel="external">欧雷宇宙</a>」，以此为载体将自己的人际网络等可共享的资源与能力显性化。购买本专栏即可接入「欧雷宇宙」这个价值网络，为自己过自由人生而赋能。</Card>
   </div>
 </Section>

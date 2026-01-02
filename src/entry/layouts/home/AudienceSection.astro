@@ -1,0 +1,19 @@
+---
+import Section from './Section.astro';
+import Card from './Card.astro';
+
+interface Props {
+  class?: string;
+}
+
+const { class: customClass } = Astro.props;
+---
+
+<Section class:list={["text-center", customClass]} title="适合谁看？">
+  <p class="max-w-3xl mx-auto">如果你算是下面几类人群之一，那么可以考虑入手本专栏：</p>
+  <div class="grid gap-4 lg:gap-9 grid-cols-1 sm:grid-cols-3">
+    <Card heading="为中年失业危机所困扰">也在为中年失业的危机所困扰，并且手足无措，想从一个真实且尽可能完整的「逆袭」案例中汲取经验与能量。</Card>
+    <Card heading="想脱离轨道过自由人生">受够了被圈养的牛马生活，但不知不打工的话该怎样去获得收入维持生活，并以此为基础逐步过上自由的人生。</Card>
+    <Card heading="就是看好并想支持欧雷">认为欧雷是个「潜力股」，对未来能够创造的价值进行「投资」；对欧雷是如何破局的很是好奇，想以看小说或漫画的心态看看他的故事。</Card>
+  </div>
+</Section>
