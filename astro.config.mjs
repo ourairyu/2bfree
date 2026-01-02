@@ -5,7 +5,7 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   ...(process.env.NODE_ENV === 'production' ? {
-    site: 'https://ourairyu.github.io',
+    site: 'https://2bfree.ourai.ws',
     base: '',
     trailingSlash: 'never',
   } : {
