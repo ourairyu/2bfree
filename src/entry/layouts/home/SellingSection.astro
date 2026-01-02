@@ -1,0 +1,25 @@
+---
+import Section from './Section.astro';
+import BenefitsCard from './BenefitsCard.astro';
+
+interface Props {
+  class?: string;
+}
+
+const { class: customClass } = Astro.props;
+---
+
+<Section class:list={["text-center", customClass]} title="值得买吗？">
+  <p class="max-w-3xl mx-auto">购买本专栏不是一次「消费」，而是对欧雷这个人进行「投资」，是否值得需要认真评估，下面给出一些参考：</p>
+  <BenefitsCard class="max-w-4xl mx-auto mb-4" />
+  <div class="max-w-3xl mx-auto">
+    <p>还可查看<a href="https://meta.ourai.ws" target="_blank" rel="external">欧雷过往的其他产出</a>进行更细致的调研，然后</p>
+    <p class="my-8"><a class="inline-block py-3 px-8 text-lg text-white bg-[#0871ab] rounded-full" href="">立即加入</a></p>
+    <p>与另外 27 名小伙伴儿一起见证欧雷破局！</p>
+  </div>
+  <!-- <ul>
+    <li>欧雷是谁</li>
+    <li>欧雷的理念是什么</li>
+    <li>欧雷宇宙是什么</li>
+  </ul> -->
+</Section>
