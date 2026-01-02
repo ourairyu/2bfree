@@ -1,0 +1,31 @@
+---
+import DefaultLayout from '#/layouts/default';
+
+import Section from '../../entry/layouts/home/Section.astro';
+
+import PriceTable from './PriceTable.astro';
+import BenefitsCompare from './BenefitsCompare.astro';
+
+const meta = {
+  title: '价格',
+};
+---
+
+<DefaultLayout meta={meta}>
+  <article class="max-w-screen-xl mx-auto py-14 px-4">
+    <!-- <header>
+      <h1>价格</h1>
+    </header> -->
+    <Section title="价格阶梯">
+      <PriceTable />
+    </Section>
+    <Section class="mt-24" title="权益对比">
+      <BenefitsCompare />
+    </Section>
+    <Section class="my-24">
+      <div class="text-center">
+        <a class="inline-block py-3 px-8 text-lg text-white bg-[#0871ab] rounded-full" href="https://xiaobot.net/p/2bfree" target="_blank" rel="external nofollow">到小报童购买</a>
+      </div>
+    </Section>
+  </article>
+</DefaultLayout>

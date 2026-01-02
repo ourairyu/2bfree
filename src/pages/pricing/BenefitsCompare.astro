@@ -1,0 +1,51 @@
+---
+const benefits = [
+  {
+    label: '获得「破局见证者」称号/勋章',
+    value: ['✔️', '✔️'],
+  },
+  {
+    label: '专属微信群',
+    value: ['✔️', '✔️'],
+  },
+  {
+    label: '自动成为个人（超级个体）社区「欧雷宇宙」成员并接入价值网络',
+    value: ['✔️', '✔️'],
+  },
+  {
+    label: '分销专栏分成',
+    value: ['15%', '40%'],
+  },
+  {
+    label: '每年 1 次单独的线上咨询或线下 coffee chat 深度聊',
+    value: ['-', '✔️'],
+  },
+  {
+    label: '新购其他欧雷个人产品的折扣',
+    value: ['-', '七折'],
+  },
+];
+---
+
+<div class="box-border p-4 border-1 overflow-hidden rounded-lg bg-white shadow-xl">
+  <div>
+    <div class="grid grid-cols-3 items-center font-bold">
+      <div class="p-3"></div>
+      <div class="p-3 border-x-1 text-center">
+        <span>订阅</span>
+      </div>
+      <div class="p-3 text-center">
+        <span>买断</span>
+      </div>
+    </div>
+  </div>
+  <div>
+    {benefits.map(benefit => (
+      <div class="grid grid-cols-3 items-center border-t-1">
+        <div class="p-3 text-neutral-500">{benefit.label}</div>
+        <div class="p-3 border-x-1 text-center">{benefit.value[0]}</div>
+        <div class="p-3 text-center">{benefit.value[1]}</div>
+      </div>
+    ))}
+  </div>
+</div>
