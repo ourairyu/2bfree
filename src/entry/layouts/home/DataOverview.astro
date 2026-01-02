@@ -1,4 +1,6 @@
 ---
+import { getBoughtCount } from '@/utils/column';
+
 interface Props {
   class?: string;
   style?: string;
@@ -8,7 +10,7 @@ const { class: customClass, style } = Astro.props;
 
 const indexes = [
   { label: '已更新文章数', value: '29 篇' },
-  { label: '购买专栏人数', value: '27 人' },
+  { label: '购买专栏人数', value: `${getBoughtCount()} 人` },
   { label: '每月更新频率', value: '1～4 篇' },
   { label: '预估截止日期', value: '2032 年' },
 ];

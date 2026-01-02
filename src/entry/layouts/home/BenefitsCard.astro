@@ -1,4 +1,6 @@
 ---
+import { getPrice, getCountRange, getRemainingCount } from '@/utils/column';
+
 import earthOnline from './earth-online.jpg';
 
 interface Props {
@@ -6,17 +8,21 @@ interface Props {
 }
 
 const { class: customClass } = Astro.props;
+
+const currentPrice = getPrice();
+const currentRange = getCountRange();
+const remainingCount = getRemainingCount();
 ---
 
 <div class:list={["box-border p-8 border-1 text-left overflow-hidden rounded-lg bg-white shadow-xl", customClass]}>
   <h3 class="sr-only">权益说明</h3>
   <img class="float-left w-[300px] mr-5 max-sm:sr-only" src={earthOnline.src} />
-  <p>买断价（限前 52 人）<span class="Price block text-5xl font-bold">198.8</span></p>
+  <p>买断价（限前 {currentRange[1]} 份，<span class="text-red-400">还剩 {remainingCount} 份</span>）<span class="Price block text-5xl font-bold">{currentPrice[1]}</span></p>
   <p>购买后可享受（部分为买断独有）</p>
   <ul class="BenefitList text-sm text-neutral-500">
+    <li>自动成为个人（超级个体）社区「欧雷宇宙」成员</li>
     <li>获得「破局见证者」称号/勋章</li>
     <li>专属微信群</li>
-    <li>自动成为个人（超级个体）社区「欧雷宇宙」成员并接入价值网络</li>
     <li>分销专栏有分成</li>
     <li>每年 1 次单独的线上咨询或线下 coffee chat 深度聊</li>
     <li>新购其他欧雷个人产品的折扣</li>

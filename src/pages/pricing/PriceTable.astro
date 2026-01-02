@@ -1,23 +1,8 @@
 ---
-const priceList = [
-  {
-    label: '1～52',
-    value: ['-', '198.8'],
-  },
-  {
-    label: '53～222',
-    value: ['198.8', '999'],
-  },
-  {
-    label: '223～1000',
-    value: ['365', '1988'],
-  },
-  {
-    label: '1001～∞',
-    value: ['365', '-'],
-  },
-];
-const currentIndex = 0;
+import { getIndexInPriceList, getPriceList } from '@/utils/column';
+
+const currentIndex = getIndexInPriceList();
+const priceList = getPriceList();
 ---
 
 <div class="box-border p-4 border-1 overflow-hidden rounded-lg bg-white shadow-xl">

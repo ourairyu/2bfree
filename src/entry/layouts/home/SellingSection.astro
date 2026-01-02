@@ -1,4 +1,6 @@
 ---
+import { getBoughtCount } from '@/utils/column';
+
 import Section from './Section.astro';
 import BenefitsCard from './BenefitsCard.astro';
 
@@ -7,6 +9,7 @@ interface Props {
 }
 
 const { class: customClass } = Astro.props;
+const boughtCount = getBoughtCount();
 ---
 
 <Section class:list={["text-center", customClass]} title="值得买吗？">
@@ -15,7 +18,7 @@ const { class: customClass } = Astro.props;
   <div class="max-w-3xl mx-auto">
     <p>还可查看<a href="https://meta.ourai.ws" target="_blank" rel="external">欧雷过往的其他产出</a>进行更细致的调研，然后</p>
     <p class="my-8"><a class="inline-block py-3 px-8 text-lg text-white bg-[#0871ab] rounded-full" href="/pricing">立即购入</a></p>
-    <p>与另外 27 名小伙伴儿一起见证欧雷破局！</p>
+    <p>与另外 {boughtCount} 名小伙伴儿一起见证欧雷破局！</p>
   </div>
   <!-- <ul>
     <li>欧雷是谁</li>
