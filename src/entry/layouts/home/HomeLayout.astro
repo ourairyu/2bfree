@@ -1,17 +1,27 @@
 ---
-import type { SupportedLocale } from '@/types';
-import { I18N_DEFAULT_LOCALE } from '@/constants/config';
-
 import DefaultLayout from '../default';
 
-import { resolveLocale } from './helper';
 import HeroSection from './HeroSection.astro';
-
-const locale = resolveLocale((Astro.currentLocale || I18N_DEFAULT_LOCALE) as SupportedLocale);
+import Section from './Section.astro';
+import IntroSection from './IntroSection.astro';
 ---
 
 <DefaultLayout>
   <article class="pb-14">
-    <HeroSection locale={locale} />
+    <HeroSection />
+    <div class="max-w-screen-xl mx-auto mt-24">
+      <IntroSection />
+      <Section class="mt-24" title="适合谁看？"></Section>
+      <Section class="mt-24" title="值得买吗？">
+        <p>购买《欧雷的破局之路》不是一次「消费」，而是对欧雷这个人进行「投资」，是否值得买确实需要认真评估下，下面给出一些参考。</p>
+        <ul>
+          <li>购买后可享受的权益</li>
+          <li>欧雷是谁</li>
+          <li>欧雷的理念是什么</li>
+          <li>欧雷宇宙是什么</li>
+        </ul>
+        <p>已有 27 名「破局见证者」：头像列表</p>
+      </Section>
+    </div>
   </article>
 </DefaultLayout>
