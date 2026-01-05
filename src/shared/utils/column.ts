@@ -1,4 +1,4 @@
-const boughtCount = 29;
+const boughtCount = 31;
 
 const priceLevel = 1;
 
